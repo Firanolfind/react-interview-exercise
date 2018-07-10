@@ -4,21 +4,40 @@ import FriendListItem from './FriendListItem';
 
 class FriendList extends Component {
   render () {
+
+    const ppp = 2;
+    const pages = Math.ceil(this.props.friends.length / ppp);
+    const currentPage = 1;
+
     return (
-      <ul className={styles.friendList}>
-        {
-          this.props.friends.map((friend, index) => {
+      <div>
+        <ul className={styles.friendList}>
+          {
+            this.props.friends.map((friend, index) => {
+              return (
+                <FriendListItem
+                  key={index}
+                  id={index}
+                  name={friend.name}
+                  starred={friend.starred}
+                  {...this.props.actions} />
+              );
+            })
+          }
+        </ul>
+        <ul className="pagination">
+          {[...Array(pages)].map((val, index) => {
             return (
-              <FriendListItem
-                key={index}
-                id={index}
-                name={friend.name}
-                starred={friend.starred}
-                {...this.props.actions} />
+              <li 
+                key={index} >
+                  <button className="btn btn-sm btn-default">
+                    {index + 1}
+                  </button>
+              </li>
             );
-          })
-        }
-      </ul>
+          })}
+        </ul>
+      </div>
     );
   }
 

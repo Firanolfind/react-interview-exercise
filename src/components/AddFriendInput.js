@@ -6,14 +6,20 @@ class AddFriendInput extends Component {
 
   render () {
     return (
-      <input
-        type="text"
-        autoFocus="true"
-        className={classnames('form-control', styles.addFriendInput)}
-        placeholder="Type the name of a friend"
-        value={this.state.name}
-        onChange={this.handleChange.bind(this)}
-        onKeyDown={this.handleSubmit.bind(this)} />
+      <div className="add-form">
+        <input
+          type="text"
+          autoFocus="true"
+          className={classnames('form-control', styles.addFriendInput)}
+          placeholder="Type the name of a friend"
+          value={this.state.name}
+          onChange={this.handleChange.bind(this)}
+          onKeyDown={this.handleSubmit.bind(this)} />
+        <div className="btn-group btn-sex">
+          <button type="button" className="btn btn-xs btn-success">Male</button>
+          <button type="button" className="btn btn-xs btn-default">Female</button>
+        </div>
+      </div>
     );
   }
 
