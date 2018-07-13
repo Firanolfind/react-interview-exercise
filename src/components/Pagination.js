@@ -2,7 +2,7 @@ import React, {Component, PropTypes} from 'react';
 import classNames from 'classnames';
 import styles from './Pagination.css';
 
-const Button = props => (
+export const Button = props => (
   <li>
     <button 
       onClick={props.onClick}
