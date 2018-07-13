@@ -1,0 +1,25 @@
+:local(.pagination) {
+  margin: 10px 0;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+:local(.pagination) li {
+  margin: 0 2px;
+}
+
+:local(.pagination) li:first-child {
+  margin-left: auto;
+}
+
+:local(.pagination) li:last-child {
+  margin-right: auto;
+}
+
+:local(.pagination) li .btn-transparent{
+  background: transparent!important;
+  border-color: #b1bcd7!important;
+  border-color: transparent!important;
+  color: #fff!important;
+}

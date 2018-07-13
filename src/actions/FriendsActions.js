@@ -1,9 +1,10 @@
 import * as types from '../constants/ActionTypes';
 
-export function addFriend(name) {
+export function addFriend(name, sex) {
   return {
     type: types.ADD_FRIEND,
-    name
+    name,
+    sex
   };
 }
 
@@ -20,3 +21,24 @@ export function starFriend(id) {
     id
   };
 }
+
+export function selectPage(page) {
+  return {
+    type: types.SELECT_PAGE,
+    page
+  };
+}
+
+export function nextPage() {
+  return {
+    type: types.NEXT_PAGE
+  };
+}
+
+export function prevPage() {
+  return {
+    type: types.PREV_PAGE
+  };
+}
+
+
